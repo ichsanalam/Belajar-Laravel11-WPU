@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css','resources/js/app.js'])
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     {{-- alpine js --}}
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -21,10 +21,13 @@
         <x-header>{{ $title }}</x-header>
 
         <main>
-            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 {{ $slot }}
             </div>
         </main>
+
+        {{-- flowbite --}}
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     </div>
 
 

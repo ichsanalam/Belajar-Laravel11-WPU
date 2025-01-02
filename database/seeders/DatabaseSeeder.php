@@ -63,5 +63,7 @@ class DatabaseSeeder extends Seeder
             Category::all(),
             User::all()
         ])->create();
+        // jalankan
+        // php artisan migrate:fresh --seed
     }
 }

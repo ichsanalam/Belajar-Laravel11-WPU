@@ -12,6 +12,9 @@ class Post extends Model
     use HasFactory;
     protected $fillable = ['title', 'author_id', 'category_id', 'slug', 'body'];
 
+    // menggunakan eager loading by default
+    protected $with = ['author', 'category'];
+
     public function author(): BelongsTo {
         return $this->belongsTo(User::class);
     }
