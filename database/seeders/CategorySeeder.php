@@ -13,7 +13,8 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        // Category::factory(3)->create();
+
+        // Category::factory(3)->create(); untuk membuat factory tanpa perlu menuliskannya di tinker
         // atau buat manual
         Category::create([
             'name' => 'Web Design',
